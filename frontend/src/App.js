@@ -158,9 +158,9 @@ function App() {
               <li>ROBINET THERMOSTATIQUE = CHAUDIÈRE À GAZ INDIVIDUELLE</li>
               <li>THERMOSTAT ÉLECTRIQUE = RADIATEURS ÉLECTRIQUES</li>
             </ul>
-            <p>
+            <h4>
               Pourquoi c’est gratuit ?
-            </p>
+            </h4>
             <p>
               Le programme est financé par le PN CEE (certificat d’économies d'énergies) représenté par les grandes entreprises polluantes telles que Total Energie, Esso, Airbus et Air France, qui financent les travaux de rénovation énergétique des foyers français au lieu de payer des taxes à l'État.
             </p>
@@ -189,12 +189,12 @@ function App() {
               {validationErrors.phone && <span className="error-text">{validationErrors.phone}</span>}
             </div>
             <div className="form-group">
-              <label>Adresse :</label>
+              <label>Ville :</label>
               <input type="text" name="address" value={formData.address} onChange={handleChange} required />
               {validationErrors.address && <span className="error-text">{validationErrors.address}</span>}
             </div>
             <div className="form-group">
-              <label>Statut :</label>
+              <label>Statut du logement :</label>
               <select name="ownershipStatus" value={formData.ownershipStatus} onChange={handleChange} required>
                 <option value="">Sélectionnez...</option>
                 <option value="Propriétaire">Propriétaire</option>

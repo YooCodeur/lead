@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .App{
-  min-width: 1024px;
+  min-width: 1704px;
   margin-bottom: 50px;
 }
 select{
@@ -61,9 +61,7 @@ form{
 }
 .ppandform{
   display: flex;
-  flex-direction: row-reverse;
-  
-  
+  flex-direction: row-reverse; 
 }
 .pointspositifs{
   padding-left: 32px;
@@ -76,7 +74,9 @@ form{
 .form-group label {
   margin-right: 10px;
   font-size: 20px;
-
+}
+h4 {
+  margin: 20px;
 }
 .eligib{
   font-size: 28px;
