@@ -12,7 +12,6 @@ app.use(cors());
 // Route pour recevoir les données du formulaire
 app.post('/api/form-submit', (req, res) => {
   const formData = req.body;
-  console.log('Form Data Received:', formData);
 
   // Créer une nouvelle instance de User avec les données du formulaire
   const newUser = new User({
@@ -28,11 +27,9 @@ app.post('/api/form-submit', (req, res) => {
   // Sauvegarder l'utilisateur dans la base de données MongoDB
   newUser.save()
     .then(() => {
-      console.log('Utilisateur enregistré avec succès');
       res.json({ message: 'Données reçues et enregistrées avec succès!' });
     })
     .catch(err => {
-      console.error('Erreur lors de l\'enregistrement de l\'utilisateur :', err);
       res.status(500).json({ error: 'Erreur serveur lors de l\'enregistrement des données' });
     });
 });

@@ -75,9 +75,7 @@ function App() {
         setErrorMessage(data.error || 'Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
         setSuccessMessage('');
       }
-      console.log('Réponse du serveur:', data);
     } catch (error) {
-      console.error('Erreur lors de l\'envoi des données:', error);
       setErrorMessage('Erreur lors de l\'envoi des données. Veuillez réessayer.');
       setSuccessMessage('');
     }
