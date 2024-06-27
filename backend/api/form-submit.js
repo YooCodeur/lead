@@ -1,11 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const db = require('./db'); // Importer la connexion à MongoDB depuis db.js
-const User = require('./models/User'); // Importer le modèle User
+const db = require('../db'); // Chemin mis à jour pour correspondre à la nouvelle structure
+const User = require('../models/User'); // Chemin mis à jour pour correspondre à la nouvelle structure
 
 const app = express();
-const PORT = process.env.PORT;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -29,7 +28,7 @@ app.post('/api/form-submit', (req, res) => {
   // Sauvegarder l'utilisateur dans la base de données MongoDB
   newUser.save()
     .then(() => {
-      console.log('Utilisateur enfregistré avec succès');
+      console.log('Utilisateur enregistré avec succès');
       res.json({ message: 'Données reçues et enregistrées avec succès!' });
     })
     .catch(err => {
@@ -38,6 +37,4 @@ app.post('/api/form-submit', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-  console.log(`Serveur backend démarré sur le port ${PORT}`);
-});
+module.exports = app;
