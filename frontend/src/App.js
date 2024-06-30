@@ -48,7 +48,7 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/form-submit', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/form-submit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
